@@ -80,7 +80,7 @@ func (m *Manager) Run() {
 	m.callback(m.afterAppShutdown)
 
 	// 此处考虑关闭超时是否有必要
-	timeoutExecFunc(m.killWaitTTL, func() error {
+	err := timeoutExecFunc(m.killWaitTTL, func() error {
 		// 前置服务关闭
 		for _, service := range utils.SliceReverse(m.services) {
 			m.stopService(service)
@@ -88,6 +88,9 @@ func (m *Manager) Run() {
 
 		return nil
 	})
+	if err != nil {
+		m.logger.WARNING("Manager %v stop services error: [%v]", m.name, err.Error())
+	}
 	m.callback(m.afterServiceShutdown)
 
 	m.logger.INFO("Manager %v stop over", m.name)
