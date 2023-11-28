@@ -1,7 +1,7 @@
 <h1 href="https://github.com/longkui-clown/clown" align="center">clown</h1>
 <p align="center">
   <a href="https://github.com/longkui-clown/clown" title="中文文档" rel="nofollow"><img src="https://img.shields.io/badge/Doc-中文-blue.svg?style=flat" alt="中文文档"></a>
-  <a href="https://github.com/longkui-clown/clown/README_en.md" title="English document" rel="nofollow"><img src="https://img.shields.io/badge/Doc-English-blue.svg?style=flat" alt="English document"></a>
+  <a href="https://github.com/longkui-clown/clown/blob/main/README_en.md" title="English document" rel="nofollow"><img src="https://img.shields.io/badge/Doc-English-blue.svg?style=flat" alt="English document"></a>
 </p>
 
 ---
